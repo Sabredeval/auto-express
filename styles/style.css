@@ -1,0 +1,173 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2, h3 {
+    font-size: 54px;
+    margin: 25 0;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/london.jpg"); 
+    min-height: 100vh;
+}
+
+.heading {
+    font-size: 72px;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.5);
+    width: 1200px;
+    height: 600px;
+    border-radius: 20px;    
+}
+
+.benefits {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.benefits * {
+    margin: 0 40px;
+    font-size: 1.5rem;
+}
+
+.get-btn, .get-btn-small {
+    color: white;
+    background-color: #3683DE;
+    height: 80px;
+    width: 500px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    border: 0;
+    opacity: revert;
+}
+
+.get-btn-small {
+    color: #3683DE;
+    background-color: white;
+    width: 350px;
+    height: 60px;
+}
+
+.call-to-action {
+    color: #fff;
+    background: rgb(54,131,222);
+    background: linear-gradient(90deg, rgba(54,131,222,1) 0%, rgba(115,179,255,1) 100%);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.services-section {
+    
+}
+
+.services {
+    display:flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.services-text {
+    max-width: 700px;
+    text-align: center;
+}
+
+.services * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.services > * > * {
+    background-color: rgba(47, 47, 47, 0.75);
+    color: white;
+    font-size: 22px;
+    width: 300px;
+    height: 30%;
+}
+
+.garden {
+    background-image: url('../img/garden.png');
+}
+
+.garage {
+    background-image: url('../img/garage.png');
+}
+
+.electronics {
+    background-image: url('../img/electronics.png');
+}
+
+.metal {
+    background-image: url('../img/metal.png');
+}
+
+
+
+/**/
+
+.get-btn:hover, .get-btn-small:hover {
+    cursor: pointer;
+}
+
+.get-btn-small:hover {
+    color: white;
+    background-color: #4a90e5;
+}
+
+.get-btn:hover {
+    background-color: white;
+    color: #4a90e5;
+
+}
+
+footer {
+    background-color: #3683DE;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.copyright-footer {
+    font-size: 0.9em;
+}
+
+.contact-footer, .email-footer, .phone-footer {
+    font-size: 1em;
+}

@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>RAE - Rubbish Auto Express</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>We are alive!</h1>
+    <div class="intro">
+        <div class="intro-container">
+            <h1 class="heading">Rubbish Collection in London</h1>
+            <ul class="benefits">
+                <li>Fast</li>
+                <li>Cheap</li>
+                <li>Reliable</li>
+                <li>7 days a week</li>
+            </ul>
+            <button class="get-btn">Get our service</button>
+        </div>
+    </div>
+    
+    <section class="services-section">
+        <h2>Our services</h2>
+        <p class="services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="services">
+            <div class="garden">
+                <div class="black-container">
+                    <div class="service-text">Yard & garden cleanup</div>
+                </div>
+            </div>
+            <div class="garage">
+                <div class="black-container">
+                    <div class="service-text">Garage clean out</div>
+                </div>
+            </div>
+            <div class="electronics">
+                <div class="black-container">
+                    <div class="service-text">Scrap metal & wood</div>
+                </div>
+            </div>
+            <div class="metal">
+                <div class="black-container">
+                    <div class="service-text">Electronics & applicances</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Why choose us</h2>
+        <img src="img/Group 16.png" alt="fast service">
+    </section>
+
+    <section>
+        <h2>How we operate</h2>
+    </section>
+
+    <section class="call-to-action">
+        <h3>Order collection now!</h3>
+        <button class="get-btn-small">Get our service</button>
+        <p>First of all I want to say this plugin is super helpful and I love how easy it is to use. I'm exporting text into excel and I was curious</p>
+    </section>
+
+    <section>
+        <h3>We work in these areas:</h3>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <h3>Rubbish Auto Collection</h3>
+        <p class="copyright-footer">©All rights reserved</p>
+        <p class="contact-footer">Our Contact details:</p>
+        <p class="email-footer">rubbishautocollection@gmail.com</p>
+        <p class="phone-footer">+4484721364321</p>
+    </footer>
+
+    <script>
+        function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: { lat: 51.509865, lng: -0.118092 }
+        });
+
+        var londonCoords = [
+            { lat: 51.6918741, lng: -0.5103753 }, 
+            { lat: 51.6918741, lng: 0.3340155 }, 
+            { lat: 51.2867602, lng: 0.3340155 },  
+            { lat: 51.2867602, lng: -0.5103753 }  
+        ];
+
+        // Construct the polygon.
+        var londonPolygon = new google.maps.Polygon({
+            paths: londonCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+        });
+        londonPolygon.setMap(map);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKut7u0fSQpqZohdgpXS2v6iBHJq9zFgg&callback=initMap" async defer></script>
 </body>
 </html>
