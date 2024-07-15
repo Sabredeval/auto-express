@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/london.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative; 
+}
+
+.form-container {
+    animation: slideInUp 1.5s ease; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.form-heading {
+    color: #3683DE;
+    margin-bottom: 10px;
+}
+
+.form-subheading {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+}
+
+.form-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Added for better padding and border calculation */
+}
+
+.form-textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 10rem;
+    box-sizing: border-box; /* Ensure padding does not exceed the set height */
+}
+
+.form-button {
+    background-color: #3683DE;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #004494;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #bbb;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px); /* Initial position off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
