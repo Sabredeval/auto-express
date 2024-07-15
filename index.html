@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>RAE - Rubbish Auto Express</title>
+    <title>Rubbish Collection</title>
     <style>
         #map {
             height: 500px;
             width: 100%;
+            max-width: 900px;
         }
     </style>
 </head>
@@ -22,54 +23,125 @@
                 <li>Reliable</li>
                 <li>7 days a week</li>
             </ul>
-            <button class="get-btn">Get our service</button>
+            <a href="./form.html">
+                <button class="get-btn">Get our service</button>
+            </a>
         </div>
     </div>
     
     <section class="services-section">
         <h2>Our services</h2>
-        <p class="services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="services-text">Explore our comprehensive range of professional rubbish collection services tailored to meet your needs:</p>
         <div class="services">
             <div class="garden">
-                <div class="black-container">
+                <div class="black-container" onclick="navigateToPage('form.html')">
                     <div class="service-text">Yard & garden cleanup</div>
                 </div>
             </div>
-            <div class="garage">
+            <div class="garage" onclick="navigateToPage('form.html')">
                 <div class="black-container">
                     <div class="service-text">Garage clean out</div>
                 </div>
             </div>
-            <div class="electronics">
+            <div class="electronics" onclick="navigateToPage('form.html')">
                 <div class="black-container">
                     <div class="service-text">Scrap metal & wood</div>
                 </div>
             </div>
-            <div class="metal">
+            <div class="metal" onclick="navigateToPage('form.html')">
                 <div class="black-container">
                     <div class="service-text">Electronics & applicances</div>
                 </div>
             </div>
         </div>
+        <script>
+            function navigateToPage(url) {
+                window.location.href = url;
+            }
+        </script>
     </section>
 
-    <section>
-        <h2>Why choose us</h2>
-        <img src="img/Group 16.png" alt="fast service">
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="content">
+            <div class="reason">
+                <h3>1. Reliable Service</h3>
+                <p>We pride ourselves on our reliability. Our team is dedicated to providing timely and consistent rubbish collection services, ensuring your waste is managed efficiently and without any hassle.</p>
+            </div>
+    
+            <div class="reason">
+                <h3>2. Affordable Pricing</h3>
+                <p>We believe that quality rubbish collection should be accessible to everyone. Our competitive pricing ensures that you get the best value for your money without compromising on service quality.</p>
+            </div>
+    
+            <div class="reason">
+                <h3>3. Eco-Friendly Practices</h3>
+                <p>We are committed to environmental sustainability. Our services include proper waste segregation and recycling, reducing the amount of waste that ends up in landfills and minimizing our carbon footprint.</p>
+            </div>
+    
+            <div class="reason">
+                <h3>4. Flexible Scheduling</h3>
+                <p>Understanding that everyone has different schedules, we offer flexible collection times to suit your needs. Whether you need daily, weekly, or one-off collections, we can accommodate your requirements.</p>
+            </div>
+    
+            <div class="reason">
+                <h3>5. Customer Satisfaction</h3>
+                <p>Our customers are at the heart of what we do. We prioritize your satisfaction and are always ready to go the extra mile to meet and exceed your expectations. Our customer service team is always available to address any concerns or questions you may have.</p>
+            </div>
+    
+            <div class="reason">
+                <h3>6. Safe and Hygienic</h3>
+                <p>We follow strict safety and hygiene protocols to ensure that your rubbish is collected and disposed of in the safest manner possible. This helps maintain a clean and healthy environment for you and your community.</p>
+            </div>
+    
+            <p class="final-text">Choose us for a reliable, affordable, and eco-friendly rubbish collection service that you can depend on. Let us handle your waste management needs while you enjoy a cleaner, greener London.</p>
+        </div>
     </section>
+    
 
-    <section>
+    <section class="how-we-operate">
         <h2>How we operate</h2>
+        <div class="operation-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-description">
+                    <h3>Submit Your Request</h3>
+                    <p>Fill out our easy-to-use form with your details and rubbish collection requirements.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-description">
+                    <h3>Quick Response</h3>
+                    <p>We aim to respond to your request within one hour with confirmation and further details.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-description">
+                    <h3>Schedule Collection</h3>
+                    <p>Our team will contact you promptly to arrange a convenient time for rubbish collection.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-description">
+                    <h3>Efficient Collection</h3>
+                    <p>We arrive on schedule to collect your rubbish, ensuring prompt and reliable service.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="call-to-action">
-        <h3>Order collection now!</h3>
-        <button class="get-btn-small">Get our service</button>
-        <p>First of all I want to say this plugin is super helpful and I love how easy it is to use. I'm exporting text into excel and I was curious</p>
+        <div class="cta-content">
+            <h3>Order collection now!</h3>
+            <p>Experience hassle-free rubbish collection with our reliable and affordable service. Available 7 days a week, we ensure your waste is collected promptly and efficiently. Sign up today and enjoy a cleaner, greener environment with our eco-friendly disposal methods.</p>
+            <button class="get-btn-small">Get our service</button>
+        </div>
     </section>
 
-    <section>
+    <section class="areas-section">
         <h3>We work in these areas:</h3>
         <div id="map"></div>
     </section>
