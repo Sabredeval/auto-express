@@ -2,18 +2,16 @@
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
-  secure: false, // Use `true` for port 465, `false` for all other ports
+  host: "imap.ethereal.email",
+  port: 993,
+  secure: false,
   auth: {
     user: "roman.beier15@ethereal.email",
     pass: "r3BsJK8FUDbpZbRcHf",
   },
 });
 
-// async..await is not allowed in global scope, must use a wrapper
 async function main() {
-  // send mail with defined transport object
   const info = await transporter.sendMail({
     from: '"Maddison Foo Koch 👻" <roman.beier15@ethereal.email>', // sender address
     to: "sabredeval@gmail.com", // list of receivers
@@ -23,7 +21,6 @@ async function main() {
   });
 
   console.log("Message sent: %s", info.messageId);
-  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
 }
 
 main().catch(console.error);
