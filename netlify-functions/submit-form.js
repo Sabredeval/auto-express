@@ -1,37 +1,29 @@
-// netlify-functions/submit-form.js
 
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
-exports.handler = async (event, context) => {
-  const { name, email, phone, details } = JSON.parse(event.body);
+const transporter = nodemailer.createTransport({
+  host: "smtp.ethereal.email",
+  port: 587,
+  secure: false, // Use `true` for port 465, `false` for all other ports
+  auth: {
+    user: "roman.beier15@ethereal.email",
+    pass: "r3BsJK8FUDbpZbRcHf",
+  },
+});
 
-  let transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'roman.beier15@ethereal.email',
-      pass: 'r3BsJK8FUDbpZbRcHf'
-    }
+// async..await is not allowed in global scope, must use a wrapper
+async function main() {
+  // send mail with defined transport object
+  const info = await transporter.sendMail({
+    from: '"Maddison Foo Koch 👻" <roman.beier15@ethereal.email>', // sender address
+    to: "sabredeval@gmail.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Hello world?", // plain text body
+    html: "<b>Hello world?</b>", // html body
   });
 
-  let mailOptions = {
-    from: 'roman.beier15@ethereal.email',
-    to: 'sabredeval@gmail.com',
-    subject: 'New Rubbish Collection Form Submission',
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDetails: ${details}`
-  };
+  console.log("Message sent: %s", info.messageId);
+  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+}
 
-  try {
-    await transporter.sendMail(mailOptions);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent successfully' })
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send email' })
-    };
-  }
-};
+main().catch(console.error);
