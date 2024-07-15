@@ -11,7 +11,7 @@ nodemailer.createTestAccount((err, account) => {
     console.log('Credentials obtained, sending message...');
 
     let transporter = nodemailer.createTransport({
-        host: smtp.ethereal.email,
+        host: "smtp.ethereal.email",
         port: 587,
         secure: false,
         auth: {
