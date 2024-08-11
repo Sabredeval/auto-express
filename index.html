@@ -151,35 +151,7 @@
         <p class="copyright-footer">©All rights reserved</p>
         <p class="contact-footer">Our Contact details:</p>
         <p class="email-footer">rubbishautocollection@gmail.com</p>
-        <p class="phone-footer">+4484721364321</p>
+        <p class="phone-footer">07493733144</p>
     </footer>
-
-    <script>
-        function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: { lat: 51.509865, lng: -0.118092 }
-        });
-
-        var londonCoords = [
-            { lat: 51.6918741, lng: -0.5103753 }, 
-            { lat: 51.6918741, lng: 0.3340155 }, 
-            { lat: 51.2867602, lng: 0.3340155 },  
-            { lat: 51.2867602, lng: -0.5103753 }  
-        ];
-
-        // Construct the polygon.
-        var londonPolygon = new google.maps.Polygon({
-            paths: londonCoords,
-            strokeColor: '#FF0000',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#FF0000',
-            fillOpacity: 0.35
-        });
-        londonPolygon.setMap(map);
-    }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKut7u0fSQpqZohdgpXS2v6iBHJq9zFgg&callback=initMap" async defer></script>
 </body>
 </html>
